@@ -1,0 +1,11 @@
+#!/bin/sh -login
+#PBS -l nodes=1:ppn=1,mem=24gb,walltime=24:00:00
+#PBS -M preeyano@msu.edu
+#PBS -m abe
+#PBS -N Bowtie2-build-gal4
+
+module load bowtie2/2.2.3
+
+cd ${PBS_O_WORKDIR}
+
+bowtie2-build gal4selected.fa gal4
